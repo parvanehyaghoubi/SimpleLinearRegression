@@ -15,7 +15,7 @@ def find_slope_intercept(xi , yi):
 
     Raises 
     ------
-    ValueError: If the number of xi and yi elements are not equal. 
+    ValueError: If the number of elements of xi and yi are not equal. 
     ZeroDivisionError: If the denominator of the slope is zero. 
 
     Examples
@@ -40,11 +40,11 @@ def find_slope_intercept(xi , yi):
     >>> yi = np.array([4, 5, 6])
     >>> find_slope_intercept(xi , yi)
     Traceback (most recent call last):
-        raise ValueError("The number of xi and yi elements must be equal.")
+        raise ValueError("The number of elements of xi and yi must be equal.")
 
     """
     if len(xi) != len(yi):
-        raise ValueError("The number of xi and yi elements must be equal.")
+        raise ValueError("The number of elements of xi and yi must be equal.")
     
     for i in xi , yi:
         """
@@ -53,7 +53,7 @@ def find_slope_intercept(xi , yi):
         Finally, θ replaces in this formula: c = ȳ - θx̄  and it computes the c after replacement. 
         θ is slope and c is intercept of a simple linear equation. 
         """
-        mean_x = np.mean(xi)
+        mean_x = np.mean(xi) 
         mean_y = np.mean(yi)
         xp = xi - mean_x
         yp = yi - mean_y
