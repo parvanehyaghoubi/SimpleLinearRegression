@@ -57,9 +57,9 @@ def find_slope_intercept(xi , yi):
         mean_y = np.mean(yi)
         xp = xi - mean_x
         yp = yi - mean_y
-        slope = np.sum(xp * yp) / np.sum(xp ** 2)
+        slope = np.sum(xp * yp) / np.sum(xp ** 2)  # Calculate the slope
         if np.sum(xp ** 2) == 0:
             raise ZeroDivisionError("The denominator of the slope can not be zero.")
         
-        intercept = mean_y - (slope * mean_x)
+        intercept = mean_y - (slope * mean_x)  # Calculate the intercept
     return f"The slope is: {slope} and the intercept is: {intercept}. \nYour simple linear equation is y = {slope} x + {intercept}"
